@@ -1,12 +1,29 @@
-# React + Vite
+## Tecnologias usadas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div style="display: inline_block"><br/>
+<img align="center" alt="html5" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img align="center" alt="html5" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+</div>
 
-Currently, two official plugins are available:
+## Resumo das funções e funcionamento do código
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O código define um To-Do List simples usando React com o seguinte funcionamento:
 
-## Expanding the ESLint configuration
+1. Estados (useState)
+task: Armazena o valor do input (tarefa atual digitada).
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+tasks: Mantém a lista de tarefas adicionadas.
+
+2. Função addTask
+Verifica se o input não está vazio (task.trim() === "").
+
+Adiciona a nova tarefa à lista usando setTasks([...tasks, task]), preservando as tarefas anteriores.
+
+Limpa o campo do input com setTask("").
+
+3. Renderização
+Um campo de input para digitar a tarefa.
+
+Um botão para adicionar a tarefa à lista.
+
+Uma lista (ul) que exibe todas as tarefas armazenadas no estado tasks usando map(), onde cada item é um li.
